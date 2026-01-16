@@ -18,12 +18,6 @@ variable "telmate_pmx" {
     pm_minimum_permission_check = optional(bool, true)
     pm_minimum_permission_list  = optional(list(string), [])
   })
-
-  validation {
-    condition     = can(regex("^https?://.+", var.telmate_pmx.pm_api_url))
-    error_message = "The pm_api_url needs to be a valid URL starting with http or https"
-  }
-
   validation {
     condition     = var.telmate_pmx.pm_timeout > 0
     error_message = "Timeout needs to be a positive number."
