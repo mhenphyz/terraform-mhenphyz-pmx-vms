@@ -2,7 +2,7 @@ variable "telmate_pmx" {
   description = "Promox Telmate Provider Configuration Variable"
   sensitive   = true
   type = object({
-    pm_api_url                  = string
+    pm_api_url                  = optional(string)
     pm_user                     = optional(string)
     pm_password                 = optional(string)
     pm_api_token_id             = optional(string)
