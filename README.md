@@ -13,16 +13,16 @@ This is basically a simplified mirror of the project. Most of the arguments supp
 
 ```hcl
 module "terraform-mhenphyz-pmx-vms"{
-  source       = "terraform-mhenphyz-pmx-vms"
-  version      = "v0.0.1"
+  source       = "mhenphyz/pmx-vms/mhenphyz"
+  version      = "v1.0.1"
 }
 ```
 #### 2. Set the required arguments for Telmate/Proxmox provider
 
 ```hcl
 module "terraform-mhenphyz-pmx-vms"{
-  source       = "terraform-mhenphyz-pmx-vms"
-  version      = "v0.0.1"
+  source       = "mhenphyz/pmx-vms/mhenphyz"
+  version      = "v1.0.1"
 
   telmate_pmx = {
     pm_api_url      = "https://my_proxmox_server.tld:8006/api2/json"
@@ -35,8 +35,8 @@ The authentication can be done by providing user and password or token as an arg
 
 ```hcl
 module "terraform-mhenphyz-pmx-vms"{
-  source       = "terraform-mhenphyz-pmx-vms"
-  version      = "v0.0.1"
+  source       = "mhenphyz/pmx-vms/mhenphyz"
+  version      = "v1.0.1"
 
   telmate_pmx = {
     pm_api_url      = "https://my_proxmox_server.tld:8006/api2/json"
@@ -79,9 +79,8 @@ This example provides the minimum required information to create a virtual machi
 
 ```hcl
 module "proxmox_vms" {
-
-  source       = "terraform-mhenphyz-pmx-vms"
-  version      = "v0.0.1"
+  source       = "mhenphyz/pmx-vms/mhenphyz"
+  version      = "v1.0.1"
   telmate_pmx = {
     pm_tls_insecure = true
   }
@@ -150,4 +149,4 @@ Terraform will perform the following actions:
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 
-### Some examples can be find at [here](/examples/)
+### Some examples can be find at [here](https://github.com/mhenphyz/terraform-mhenphyz-pmx-vms/examples)
